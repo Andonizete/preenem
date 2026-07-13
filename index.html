@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pré Enem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">PRÉ <span>ENEM</span></div>
+
+  <ul class="nav-links">
+    <li><a href="#materias">Matérias</a></li>
+    <li><a href="#cronograma">Cronograma</a></li>
+    <li><a href="#simulado">Simulados</a></li>
+    <li><a href="#redacao">Redação</a></li>
+    <!--<li><a href="#dicas">Dicas</a></li>-->
+  </ul>
+
+  <button class="nav-cta" onclick="document.getElementById('simulado')?.scrollIntoView({behavior:'smooth'})">
+    Iniciar Simulado
+  </button>
+
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Menu mobile -->
+<div class="nav-mobile" id="nav-mobile">
+  <a href="#materias"   onclick="fecharMenu()">Matérias</a>
+  <a href="#cronograma" onclick="fecharMenu()">Cronograma</a>
+  <a href="#simulado"   onclick="fecharMenu()">Simulados</a>
+  <a href="#redacao"    onclick="fecharMenu()">Redação</a>
+  <a href="#dicas"      onclick="fecharMenu()">Dicas</a>
+  <button class="nav-cta-mobile"
+    onclick="fecharMenu(); document.getElementById('simulado')?.scrollIntoView({behavior:'smooth'})">
+    Iniciar Simulado
+  </button>
+</div>
+
+<!-- HERO -->
+<section class="dsf">
+  <div class="dsf-grade"></div>
+  <div class="dsf-circulo"></div>
+
+  <div class="dsf-esq">
+    <div class="dsf-chr">Plataforma Gratuita de Estudos</div>
+    <div class="dsf-pqn">Conquiste sua<br><span class="sotaque">aprovação</span><br>no ENEM</div>
+    <p class="dsf-sub">Material completo, simulados, cronograma personalizado e tudo que você precisa para se sair bem nas cinco competências.</p>
+    <div class="dsf-btn">
+      <a href="#materias" class="btn-primario">Estudar Agora</a>
+      <a href="#simulado" class="btn-outline">Fazer Simulado</a>
+    </div>
+  </div>
+
+  <div class="dsf-dir">
+    <div class="dsf-contagemR">
+      <div class="contagemR-lb">⏳ Contagem Regressiva — ENEM 2026</div>
+      <div class="contagemR-grade" id="contagem">
+        <div class="contagem-und">
+          <div class="contagem-num" id="cd-dia">--</div>
+          <div class="contagem-und-nome">Dias</div>
+        </div>
+        <div class="contagem-und">
+          <div class="contagem-num" id="cd-horas">--</div>
+          <div class="contagem-und-nome">Horas</div>
+        </div>
+        <div class="contagem-und">
+          <div class="contagem-num" id="cd-min">--</div>
+          <div class="contagem-und-nome">Min</div>
+        </div>
+        <div class="contagem-und">
+          <div class="contagem-num" id="cd-sec">--</div>
+          <div class="contagem-und-nome">Seg</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dsf-lg">
+      <div class="dsf-lgs">
+        <div class="dsf-lgs-num">5</div>
+        <div class="dsf-lgs-lb">Áreas do Conhecimento</div>
+      </div>
+      <div class="dsf-lgs">
+        <div class="dsf-lgs-num">180</div>
+        <div class="dsf-lgs-lb">Questões por Prova</div>
+      </div>
+      <div class="dsf-lgs">
+        <div class="dsf-lgs-num">1000</div>
+        <div class="dsf-lgs-lb">Pontos Máximos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATÉRIAS -->
+<section id="materias">
+  <div class="materias-cbçl">
+    <div class="section-tag">Áreas de Conhecimento</div>
+    <h2 class="section-pqn">Todas as matérias<br>em um só lugar</h2>
+    <p class="section-desc">O ENEM avalia quatro grandes áreas. Clique em cada cartão para ver os tópicos mais cobrados.</p>
+  </div>
+
+  <div class="materias-grade">
+
+    <div class="materia-card mat-azul">
+      <div class="materia-top">
+        <div class="materia-icon">📐</div>
+        <div>
+          <div class="materia-prog-lb">Peso Médio</div>
+          <div class="materia-prog-num">25%</div>
+        </div>
+      </div>
+      <div class="materia-body">
+        <div class="materia-nome" id="matematica">Matemática</div>
+        <div class="materia-desc">Funções, Geometria, Estatística, Probabilidade e Raciocínio lógico-quantitativo.</div>
+        <div class="materia-bar"><div class="materia-bar-fill" style="width:72%"></div></div>
+        <div class="materia-topicos">
+          <span class="topico-chip">Funções</span>
+          <span class="topico-chip">Geometria</span>
+          <span class="topico-chip">Probabilidade</span>
+          <span class="topico-chip">Estatística</span>
+          <span class="topico-chip">Progressões</span>
+          <span class="topico-chip">Trigonometria</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="materia-card mat-verm">
+      <div class="materia-top">
+        <div class="materia-icon">📖</div>
+        <div>
+          <div class="materia-prog-lb">Peso Médio</div>
+          <div class="materia-prog-num">25%</div>
+        </div>
+      </div>
+      <div class="materia-body">
+        <div class="materia-nome" id="linguagem">Linguagens e Códigos</div>
+        <div class="materia-desc">Interpretação de texto, literatura, língua estrangeira, artes e tecnologias.</div>
+        <div class="materia-bar"><div class="materia-bar-fill" style="width:65%"></div></div>
+        <div class="materia-topicos">
+          <span class="topico-chip">Interpretação</span>
+          <span class="topico-chip">Literatura</span>
+          <span class="topico-chip">Gramática</span>
+          <span class="topico-chip">Inglês/Espanhol</span>
+          <span class="topico-chip">Semiótica</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="materia-card mat-verde">
+      <div class="materia-top">
+        <div class="materia-icon">🔬</div>
+        <div>
+          <div class="materia-prog-lb">Peso Médio</div>
+          <div class="materia-prog-num">25%</div>
+        </div>
+      </div>
+      <div class="materia-body">
+        <div class="materia-nome" id="ciencias da natureza">Ciências da Natureza</div>
+        <div class="materia-desc">Física, Química e Biologia integradas com foco em aplicações do cotidiano.</div>
+        <div class="materia-bar"><div class="materia-bar-fill" style="width:58%"></div></div>
+        <div class="materia-topicos">
+          <span class="topico-chip">Física</span>
+          <span class="topico-chip">Química</span>
+          <span class="topico-chip">Biologia</span>
+          <span class="topico-chip">Ecologia</span>
+          <span class="topico-chip">Genética</span>
+          <span class="topico-chip">Termodinâmica</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="materia-card mat-roxo">
+      <div class="materia-top">
+        <div class="materia-icon">🌍</div>
+        <div>
+          <div class="materia-prog-lb">Peso Médio</div>
+          <div class="materia-prog-num">25%</div>
+        </div>
+      </div>
+      <div class="materia-body">
+        <div class="materia-nome" id="ciencias humanas">Ciências Humanas</div>
+        <div class="materia-desc">História, Geografia, Filosofia e Sociologia com foco em cidadania e análise crítica.</div>
+        <div class="materia-bar"><div class="materia-bar-fill" style="width:80%"></div></div>
+        <div class="materia-topicos">
+          <span class="topico-chip">História</span>
+          <span class="topico-chip">Geografia</span>
+          <span class="topico-chip">Filosofia</span>
+          <span class="topico-chip">Sociologia</span>
+          <span class="topico-chip">Atualidades</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="materia-card mat-cyan">
+      <div class="materia-top">
+        <div class="materia-icon">✍️</div>
+        <div>
+          <div class="materia-prog-lb">Máxima</div>
+          <div class="materia-prog-num">1000 pts</div>
+        </div>
+      </div>
+      <div class="materia-body">
+        <div class="materia-nome" id="redação">Redação</div>
+        <div class="materia-desc">Texto dissertativo-argumentativo com proposta de intervenção. Vale até 1000 pontos.</div>
+        <div class="materia-bar"><div class="materia-bar-fill" style="width:45%"></div></div>
+        <div class="materia-topicos">
+          <span class="topico-chip">Competência I</span>
+          <span class="topico-chip">Competência II</span>
+          <span class="topico-chip">Competência III</span>
+          <span class="topico-chip">Competência IV</span>
+          <span class="topico-chip">Competência V</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CRONOGRAMA -->
+<section id="cronograma">
+  <div class="section-tag">Planejamento</div>
+  <h2 class="section-pqn">Cronograma de Estudos</h2>
+  <p class="section-desc">Organize seu tempo com um plano semanal equilibrado entre todas as áreas.</p>
+
+  <div class="crono-grade">
+    <div class="crono-dir">
+      <h3>Fases do Estudo</h3>
+      <div class="conteudo-sem">
+        <div class="num-semanal">Fase 1 — Semanas 1-4</div>
+        <div class="titulo-sem">Revisão de Conteúdo Base</div>
+      </div>
+      <div class="conteudo-sem">
+        <div class="num-semanal">Fase 2 — Semanas 5-8</div>
+        <div class="titulo-sem">Aprofundamento e Exercícios</div>
+      </div>
+      <div class="conteudo-sem">
+        <div class="num-semanal">Fase 3 — Semanas 9-10</div>
+        <div class="titulo-sem">Simulados e Revisão Final</div>
+      </div>
+      <div class="conteudo-sem">
+        <div class="num-semanal">Semana de Prova</div>
+        <div class="titulo-sem">Descanso e Revisão Leve</div>
+      </div>
+    </div>
+
+    <div class="crono-esq">
+      <h3>Semana Modelo — Fase 1</h3>
+
+      <div class="prog-dia">
+        <div class="dia">Terça</div>
+        <div class="h-dia">
+          <div class="h-ciencias">🔬 <span>Ciências — Física: Cinemática</span> <span class="tempo">2h</span></div>
+          <div class="h-portugues">📖 <span>Linguagens — Interpretação</span> <span class="tempo">1h</span></div>
+        </div>
+      </div>
+
+      <div class="prog-dia">
+        <div class="dia">Sábado</div>
+        <div class="h-dia">
+          <div class="h-portugues">📖 <span>Linguagens — Literatura Brasileira</span> <span class="tempo">2h</span></div>
+          <div class="h-humanas">🌍 <span>Humanas — Geografia: Geopolítica</span> <span class="tempo">1h</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--SIMULADO-->
+<section id="simulado">
+  <div class="sim-geral">
+    <div class="section-tag">MINI SIMULADO</div>
+    <h2 class="section-pqn">Aprimore seus conhecimentos</h2>
+    <p class="section-desc">Questões para testar seu desempenho!</p>
+  </div>
+  <div class="quiz-caixa" id="quiz-container">
+    <div class="quiz-cbç">
+      <div class="quiz-cbç-pqn">Simulado Pré-Enem</div>
+      <div class="quiz-count" id="quiz-counter">Questão 1 de 5</div>
+    </div>
+    <div class="quiz-body" id="quiz-body">
+      <div class="quiz-assunto" id="q-subject"></div>
+      <div class="quiz-questões" id="q-text"></div>
+      <div class="quiz-opções" id="q-options"></div>
+    </div>
+    <div class="quiz-footer">
+      <div class="quiz-feedb" id="q-feedback"></div>
+      <button class="btn-proximo" id="btn-next" onclick="nextQuestion()" disabled>Próxima</button>
+    </div>
+  </div>
+</section>
+
+<!--REDAÇÃO-->
+
+<section id="redacao">
+  <div class="section-tag">Redação PRÉ-ENEM</div>
+  <h2 class="section-pqn">As 5 Competências<br>Avaliadas</h2>
+  <p class="section-desc">Cada competência vale até 200 pontos. Domine e terá nota 1000.</p>
+
+  <div class="redação-grade">
+    <div>
+      <div class="comp-item">
+        <div class="comp-num">01</div>
+        <div>
+          <div class="comp-nome">Domínio da norma culta</div>
+          <div class="comp-desc">Demonstre domínio da modalidade escrita formal da língua portuguesa.</div>
+          <div class="comp-pont">
+            <div class="pont"><div class="score-fill" style="width:90%"></div></div>
+            <div class="pont-pts">200 pts</div>
+          </div>
+        </div>
+      </div>
+      <div class="comp-item">
+        <div class="comp-num">02</div>
+        <div>
+          <div class="comp-nome">Compreensão da proposta</div>
+          <div class="comp-desc">Compreender a proposta e aplicar conceitos de áreas do conhecimento para desenvolver o tema.</div>
+          <div class="comp-pont">
+            <div class="pont"><div class="score-fill" style="width:90%"></div></div>
+            <div class="pont-pts">200 pts</div>
+          </div>
+        </div>
+      </div>
+      <div class="comp-item">
+        <div class="comp-num">03</div>
+        <div>
+          <div class="comp-nome">Argumentação e seleção de informações</div>
+          <div class="comp-desc">Selecionar, relacionar, organizar e interpretar informações em defesa de um ponto de vista.</div>
+          <div class="comp-pont">
+            <div class="pont"><div class="score-fill" style="width:90%"></div></div>
+            <div class="pont-pts">200 pts</div>
+          </div>
+        </div>
+      </div>
+      <div class="comp-item">
+        <div class="comp-num">04</div>
+        <div>
+          <div class="comp-nome">Coesão textual</div>
+          <div class="comp-desc">Demonstrar conhecimento dos mecanismos linguísticos necessários para a construção da argumentação.</div>
+          <div class="comp-pont">
+            <div class="pont"><div class="score-fill" style="width:90%"></div></div>
+            <div class="pont-pts">200 pts</div>
+          </div>
+        </div>
+      </div>
+      <div class="comp-item">
+        <div class="comp-num">05</div>
+        <div>
+          <div class="comp-nome">Proposta de intervenção</div>
+          <div class="comp-desc">Elaborar proposta de intervenção para o problema abordado, respeitando os direitos humanos.</div>
+          <div class="comp-pont">
+            <div class="pont"><div class="score-fill" style="width:90%"></div></div>
+            <div class="pont-pts">200 pts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--FOOTER-->
+
+<footer>
+  <div class="footer-grade">
+    <div>
+      <div class="footer-logo">PRÉ<span>ENEM</span></div>
+      <p class="footer-sobre">Plataforma educacional gratuita para estudantes que buscam aprovação no ENEM e ingresso nas melhores universidades do Brasil.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Matérias</h4>
+      <ul>
+        <li><a href="#matematica">Matemática</a></li>
+        <li><a href="#linguagem">Linguagens</a></li>
+        <li><a href="#ciencias da natureza">Ciências da Natureza</a></li>
+        <li><a href="#ciencias humanas">Ciências Humanas</a></li>
+        <!--<li><a href="#redação">Redação</a></li>-->
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="#simulado">Simulados</a></li>
+        <li><a href="#cronograma">Cronograma</a></li>
+        <li><a href="#">Videoaulas</a></li>
+        <!--<li><a href="#">Resumos PDF</a></li>
+        <li><a href="#">Questões Anteriores</a></li>-->
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informações</h4>
+      <ul>
+        <li><a href="#">Sobre o ENEM</a></li>
+        <li><a href="#">Datas</a></li>
+        <!--<li><a href="#">SISU / PROUNI</a></li>
+        <li><a href="#">FIES</a></li>-->
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-btn">
+    <div class="footer-btn-texto">© 2026 PRÉ-ENEM — Plataforma Educacional</div>
+    <div class="footer-botn-texto">Feito com 💛 para você</div>
+  </div>
+</footer>
+<script>
+  /* ===== HAMBURGUER ===== */
+  const hamburger  = document.getElementById('hamburger');
+  const navMobile  = document.getElementById('nav-mobile');
+
+  hamburger.addEventListener('click', () => {
+    const aberto = navMobile.classList.toggle('aberto');
+    hamburger.classList.toggle('aberto', aberto);
+    hamburger.setAttribute('aria-expanded', aberto);
+  });
+
+  function fecharMenu() {
+    navMobile.classList.remove('aberto');
+    hamburger.classList.remove('aberto');
+    hamburger.setAttribute('aria-expanded', false);
+  }
+
+  // Fecha menu ao clicar fora
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('nav') && !e.target.closest('#nav-mobile')) {
+      fecharMenu();
+    }
+  });
+
+  /* ===== CONTAGEM REGRESSIVA ===== */
+  function atualizarContagem() {
+    // ENEM 2026 — primeiro domingo de novembro
+    const enem = new Date('2026-11-01T08:00:00');
+    const agora = new Date();
+    const diff  = enem - agora;
+
+    if (diff <= 0) {
+      ['cd-dia','cd-horas','cd-min','cd-sec'].forEach(id => {
+        document.getElementById(id).textContent = '00';
+      });
+      return;
+    }
+
+    const dias   = Math.floor(diff / 86400000);
+    const horas  = Math.floor((diff % 86400000) / 3600000);
+    const min    = Math.floor((diff % 3600000)  / 60000);
+    const seg    = Math.floor((diff % 60000)    / 1000);
+
+    document.getElementById('cd-dia').textContent   = String(dias).padStart(2,'0');
+    document.getElementById('cd-horas').textContent = String(horas).padStart(2,'0');
+    document.getElementById('cd-min').textContent   = String(min).padStart(2,'0');
+    document.getElementById('cd-sec').textContent   = String(seg).padStart(2,'0');
+  }
+
+  atualizarContagem();
+  setInterval(atualizarContagem, 1000);
+
+
+  /* ===== QUIZ / SIMULADO ===== */
+  const questions = [
+    {
+      subject: '📐 Matemática',
+      question: 'Uma torneira enche um tanque em 4 horas. Outra torneira enche o mesmo tanque em 6 horas. Trabalhando juntas, em quantas horas encherão o tanque?',
+      options: ['1h 20min', '2h 24min', '2h 40min', '3h 00min', '3h 20min'],
+      correct: 1,
+      explanation: 'Taxa juntas = 1/4 + 1/6 = 5/12 por hora. Tempo = 12/5 = 2h 24min. ✓'
+    },
+    {
+      subject: '🌍 Ciências Humanas',
+      question: 'O processo de industrialização brasileiro nas décadas de 1950-1960, baseado na política de "substituição de importações", teve como principal consequência:',
+      options: [
+        'A redução da dependência externa do país',
+        'O crescimento desordenado das cidades e aumento das desigualdades regionais',
+        'A distribuição igualitária da renda nacional',
+        'O fortalecimento da agricultura como base econômica',
+        'A eliminação do trabalho informal nas cidades'
+      ],
+      correct: 1,
+      explanation: 'A industrialização concentrada no sudeste gerou migrações e crescimento urbano desordenado. ✓'
+    },
+    {
+      subject: '🔬 Ciências da Natureza',
+      question: 'Um objeto é lançado verticalmente para cima com velocidade inicial de 20 m/s. Considerando g = 10 m/s², qual a altura máxima atingida?',
+      options: ['10 m', '15 m', '20 m', '40 m', '50 m'],
+      correct: 2,
+      explanation: 'h = v²/2g = 400/20 = 20 m. ✓'
+    },
+    {
+      subject: '📖 Linguagens',
+      question: 'Sobre as funções da linguagem, a frase "Que dia lindo!" exemplifica principalmente a função:',
+      options: ['Referencial', 'Metalinguística', 'Fática', 'Emotiva/Expressiva', 'Conativa/Apelativa'],
+      correct: 3,
+      explanation: 'A função emotiva expressa sentimentos e emoções do emissor. ✓'
+    },
+    {
+      subject: '✍️ Redação',
+      question: 'Em uma redação ENEM nota 1000, a proposta de intervenção deve conter obrigatoriamente:',
+      options: [
+        'Apenas o agente e a ação proposta',
+        'Agente, ação, modo/meio, finalidade e efeito esperado',
+        'Apenas a solução geral do problema',
+        'Citação de leis e artigos da constituição',
+        'Exemplos de países que já resolveram o problema'
+      ],
+      correct: 1,
+      explanation: 'A Competência V exige os 5 elementos: agente, ação, modo, finalidade e efeito esperado. ✓'
+    }
+  ];
+
+  let current = 0, score = 0, answered = false;
+
+  function loadQuestion() {
+    const q = questions[current];
+    document.getElementById('q-subject').textContent = q.subject;
+    document.getElementById('q-text').textContent = q.question;
+    document.getElementById('quiz-counter').textContent = `Questão ${current+1} de ${questions.length}`;
+    document.getElementById('q-feedback').textContent = '';
+    document.getElementById('q-feedback').className = 'quiz-feedb';
+    document.getElementById('btn-next').disabled = true;
+    answered = false;
+
+    const opts = document.getElementById('q-options');
+    opts.innerHTML = '';
+    const letters = ['A','B','C','D','E'];
+    q.options.forEach((opt, i) => {
+      const div = document.createElement('div');
+      div.className = 'quiz-option';
+      div.innerHTML = `<div class="opt-letter">${letters[i]}</div> <span>${opt}</span>`;
+      div.onclick = () => selectOption(i, div);
+      opts.appendChild(div);
+    });
+  }
+
+  function selectOption(idx, el) {
+    if (answered) return;
+    answered = true;
+    const q = questions[current];
+    const opts = document.querySelectorAll('.quiz-option');
+    opts.forEach(o => o.style.pointerEvents = 'none');
+    el.classList.add('selected');
+
+    if (idx === q.correct) {
+      el.classList.add('correct');
+      document.getElementById('q-feedback').textContent = '🎉 Correto! ' + q.explanation;
+      document.getElementById('q-feedback').className = 'quiz-feedb ok';
+      score++;
+    } else {
+      el.classList.add('wrong');
+      opts[q.correct].classList.add('correct');
+      document.getElementById('q-feedback').textContent = '❌ Incorreto. ' + q.explanation;
+      document.getElementById('q-feedback').className = 'quiz-feedb err';
+    }
+    document.getElementById('btn-next').disabled = false;
+  }
+
+  function nextQuestion() {
+    current++;
+    if (current >= questions.length) {
+      showResult(); return;
+    }
+    loadQuestion();
+  }
+
+  function showResult() {
+    const pct = Math.round((score / questions.length) * 100);
+    let emoji = score >= 4 ? '🏆' : score >= 3 ? '👍' : score >= 2 ? '📚' : '💪';
+    let msg = score >= 4 ? 'Excelente! Continue assim!' : score >= 3 ? 'Bom desempenho! Revise os erros.' : 'Ainda há espaço para melhorar. Estude mais!';
+    document.getElementById('quiz-body').innerHTML = `
+      <div class="quiz-result">
+        <div class="result-emoji">${emoji}</div>
+        <div class="result-score">${score}/${questions.length}</div>
+        <div class="result-msg">${pct}% de acertos — ${msg}</div>
+        <button class="btn-retry" onclick="restartQuiz()">🔄 Refazer Simulado</button>
+      </div>`;
+    document.querySelector('.quiz-footer').style.display = 'none';
+  }
+
+  function restartQuiz() {
+    current = 0; score = 0;
+    document.querySelector('.quiz-footer').style.display = 'flex';
+    loadQuestion();
+  }
+
+  loadQuestion();
+
+  /* ── Cronograma: destacar fase clicada ── */
+  document.querySelectorAll('.conteudo-sem').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.conteudo-sem').forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
